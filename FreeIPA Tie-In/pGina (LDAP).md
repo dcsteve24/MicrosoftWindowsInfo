@@ -1,4 +1,4 @@
-##Configuring Windows to Use FreeIPA Authentication via pGina Software
+## Configuring Windows to Use FreeIPA Authentication via pGina Software
 
 #These instructions tie FreeIPA into LDAP authentication for windows machines. This has been tested on Windows 10 and Server 2012.
 

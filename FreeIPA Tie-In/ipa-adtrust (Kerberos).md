@@ -1,4 +1,4 @@
-##Configuring Windows to Use FrrIPA Authentication via ipa-adtrust Module.
+## Configuring Windows to Use FreeIPA Authentication via ipa-adtrust Module.
 
 # The following procedures outline the steps to use FreeIPAs kerberos authentication for Windows. This has been tested on Windows 7. I have attempted it on Server 2012 but the FreeIPA was preconfigured and me editing things broke authentication so had to revert and go the pGina route.
 
