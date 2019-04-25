@@ -1,0 +1,13 @@
+# Must be Win 8 or greater
+
+Please apply the following changes to the domain; apply to domain level so it hits all domain devices (servers, workstations, etc). This has been tested and works on Harris devices.
+
+1. Computer Config --> Policies --> Windows Settings --> Security Settings --> Local Policies --> Audit Policies --> Audit Object Access: Success and Failure
+
+2. Computer Config --> Policies --> Windows Settings --> Security Settings --> Advanced Audit Policy Configuration --> Audit Policies --> Object Access --> Audit File System: Success and Failure
+
+3. Computer Config --> Policies --> Windows Settings --> Security Settings --> Advanced Audit Policy Configuration --> Audit Policies --> Object Access --> Audit Removable Storage: Success and Failure
+
+gpupdate on machine(s)
+
+These settings will start to generate logs under the Event Viewer, Security section as 4463 Event IDs. There will be a series of logs generated, which contain when a user plugs in or inserts a CD/DVD or USB, and when the user copies to or from said device.
