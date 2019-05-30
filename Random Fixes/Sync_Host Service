@@ -1,0 +1,9 @@
+#On Server 2016 I started having a service which couldnt start: Sync Host
+#This service was tied to something called OneSync which syncs mailand other contact information to Microsoft for backup.
+#In most environments, this is not desired on a server. However, attempting to disable it from Control Panel or Powershell led to Parameter Errors.
+#So here are the following steps to disable the service once and for all.
+
+1. Open the registry with regedit
+2. Browse to Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\OneSyncSvc
+3. Change the "Start" value to 4 (Hexadecimal)
+4. There may be another service right under it with random digits afterwards i.e. OneSyncSvc_3c9753. Do step 3 to it as well if there is.

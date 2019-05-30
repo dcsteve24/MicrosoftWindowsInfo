@@ -1,0 +1,59 @@
+The following settings enable the Bitlocker policy with standard protections and upload the keys to Active Directory for backup. You will still need to enable BitLocker on the PC itself.
+
+Computer Configuration --> Policies --> Administrative Templates --> Windows Components:
+  BitLocker Drive Encryption:
+    Choose Drive Encryption Method and Cipher Strength: Enabled
+      Select the Encryption Method For Operating System Drives: AES-CBC-256-bit
+      Select the Encryption Method for Fixed Data Drives: AES-CBC-256-bit
+      Select the Encryption Method for Removable Data Drives: AES-CBC 256-bit
+    Provide the Unique Identifiers for Your Organization: Enabled
+      BitLocker Identification Field: <Company Name>
+      Allowed BitLocker Identification Field: <Company Name>
+    Store BitLocker Recovery Information in Active Directory Domain Services: Enabled
+      Require BitLocker Backup to AD DS: Enabled
+      Select BitLocker Recovery Information to Store: Recovery Passwords and Key Packages
+    Fixed Data Drives (Folder):
+      Choose How BitLocker-Protected Fixed Drives Can Be Recovered: Enabled
+        Allow Data Recovery Agent: Enabled
+        Configure User Storage of BitLocker Recovery Information: Allow 48-Digit Recovery Passwords, Allow 256-Bit Recovery Key
+        Omit Recovery Options From the BitLocker Setup Wizard: Disabled
+        Save BitLocker Recovery Information to AD DS for Fixed Data Drives: Enabled
+        Configure Storage of BitLocker Recovery Information to AD DS: Backup Recovery Passwords and Key Packages
+        Do Not Enable BitLocker Until Recovery Information is Stored to AD DS for Fixed Data Drives: Enabled
+      Configure Use of Passwords For Fixed Data Drives: Enabled
+        Require Password For Fixed Data Drive: Enabled
+        Configure Password Complexity For Fixed Data Drives: Allow Password Complexity
+        Minimum Password Length for Fixed Data Drive: 16
+      Enforce Drive Encryption Type on Fixed Data Drives: Enabled
+        Select the Encryption Type: Full Disk Encryption
+    Operating System Drives (Folder):
+      Choose How BitLocker-Protected Fixed Drives Can Be Recovered: Enabled
+        Allow Data Recovery Agent: Enabled
+        Configure User Storage of BitLocker Recovery Information: Allow 48-Digit Recovery Passwords, Allow 256-Bit Recovery Key
+        Omit Recovery Options From the BitLocker Setup Wizard: Disabled
+        Save BitLocker Recovery Information to AD DS for Fixed Data Drives: Enabled
+        Configure Storage of BitLocker Recovery Information to AD DS: Backup Recovery Passwords and Key Packages
+        Do Not Enable BitLocker Until Recovery Information is Stored to AD DS for Fixed Data Drives: Enabled
+      Configure Minimum PIN Length for Startup: Enabled
+        Minimum Characters: 16
+      Require Additional Authentication at Startup: Enabled
+        Allow BitLocker Without A Compatible TPM: Enabled
+        Configure TPM Startup: Allow TPM
+        Configure TPM Startup PIN: Allow Startup PIN With TPM
+        Configure TPM Startup Key: Allow Startup Key With TPM
+        Configure TPM Startup Key and PIN: Allow Startup Key with TPM
+    Removable Data Drives (Folder):
+      Choose How BitLocker-Protected Fixed Drives Can Be Recovered: Enabled
+        Allow Data Recovery Agent: Enabled
+        Configure User Storage of BitLocker Recovery Information: Allow 48-Digit Recovery Passwords, Allow 256-Bit Recovery Key
+        Omit Recovery Options From the BitLocker Setup Wizard: Disabled
+        Save BitLocker Recovery Information to AD DS for Fixed Data Drives: Enabled
+        Configure Storage of BitLocker Recovery Information to AD DS: Backup Recovery Passwords and Key Packages
+        Do Not Enable BitLocker Until Recovery Information is Stored to AD DS for Fixed Data Drives: Enabled
+      Configure Use of Passwords For Removable Data Drives: Enabled
+        Require Password For Fixed Data Drive: Enabled
+        Configure Password Complexity For Fixed Data Drives: Allow Password Complexity
+        Minimum Password Length for Fixed Data Drive: 16
+      Control Use of BitLocker on Removable Media: Enabled
+        Allow Users to Apply BitLocker Protection on Removable Data Drives: Enabled
+        Allow Users to Suspend and Decrypt BitLocker Protection on Removable Data Drives: Enabled
