@@ -57,3 +57,11 @@ Computer Configuration --> Policies --> Administrative Templates --> Windows Com
       Control Use of BitLocker on Removable Media: Enabled
         Allow Users to Apply BitLocker Protection on Removable Data Drives: Enabled
         Allow Users to Suspend and Decrypt BitLocker Protection on Removable Data Drives: Enabled
+
+
+The above sets the policy for BitLocker. To enable, you need to go to each device and do the following (note for the policy to take hold you may need to gpupdate /force and/or reboot):
+1. Control Panel --> Manage Bitlocker
+2. Turn on Bitlocker
+3. Answer the prompts as desired.
+4. A reboot will be required. Upon reboot, you will need to enter the PIN/Password to decrypt.
+5. The recovery key should now be loaded to that specific computers entry in the properties. You should see a new tab called "Recovery Keys". You may need to enabled Advanced Features to see it.
