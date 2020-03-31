@@ -1,0 +1,6 @@
+Make a new folder.
+Rename it to this:
+
+Settings.{ED7BA470-8E54-465E-825C-99712043E01C}
+
+and hit enter. It will turn into a clickable control panel with every single option.
